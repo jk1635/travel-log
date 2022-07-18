@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Image = props => {
-  const { src, alt, width, opacity, size, objectFit } = props;
+  const { src, alt, width, size, objectFit, margin } = props;
 
-  const styles = { src, alt, width, opacity, size, objectFit };
+  const styles = { src, alt, width, size, objectFit, margin };
 
   return <ImageBox {...styles} alt={alt} />;
 };
@@ -22,7 +22,7 @@ const ImageBox = styled.img`
   background-image: url("${props => props.src}");
   background-position: center;
   background-size: cover;
-  ${props => (props.opacity ? `opacity: ${props.opacity};` : "")}
+  ${props => (props.margin ? `margin: ${props.margin};` : "")}
   ${props => (props.objectFit ? `object-fit: ${props.objectFit};` : "")}
 `;
 

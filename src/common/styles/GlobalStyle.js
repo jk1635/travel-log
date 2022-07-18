@@ -4,9 +4,20 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --main: #1DC6D1;
     --bggray: #EEEEEE;
-    --bgwhite: #FFFFFF;
+    --white: #FFFFFF;
+    --gray: #898D9A;
+    --bordergray: #B5BAC4;
   }
-  
+
+  @font-face {
+    font-family: "Montserrat";         
+    src: url(${require("../assets/fonts/Montserrat-Regular.ttf")});
+  }
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url(${require("../assets/fonts/Montserrat-SemiBold.ttf")});
+  }
+
   * {
     box-sizing: border-box;
     &:focus, &:active {
@@ -19,12 +30,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-size: 62.5%;
   }
-  
-
 
   body {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", "Montserrat-Bold";
+    /* letter-spacing: em; */
   }
 
   div,

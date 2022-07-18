@@ -12,14 +12,16 @@ const Template = ({ children }) => {
 const MainBox = styled.div`
   display: flex;
   justify-content: center;
+  /* height: 100vh; */
   background-color: var(--bggray);
+  /* border: 1px solid green; */
 `;
 
 const Main = styled.main`
   width: 100%;
   max-width: 50rem;
-  height: 100vh;
-  background-color: var(--bgwhite);
+  background-color: var(--white);
+  /* border: 1px solid black; */
 `;
 
 export default Template;

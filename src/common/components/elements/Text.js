@@ -83,8 +83,8 @@ Text.defaultProps = {
 
 const H1 = styled.h1`
   color: ${props => props.color};
-  font-size: 2rem;
-  font-family: "Pretendard-Bold";
+  font-size: ${props => props.size};
+  font-family: "Montserrat";  
   ${props => (props.width ? `width: ${props.width};` : "")}
   ${props => (props.height ? `height: ${props.height};` : "")} 
   ${props => (props.padding ? `padding: ${props.padding};` : "")}
@@ -95,7 +95,6 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   color: ${props => props.color};
   font-size: 1.7rem;
-  font-family: "Pretendard-Bold";
   ${props => (props.width ? `width: ${props.width};` : "")}
   ${props => (props.height ? `height: ${props.height};` : "")} 
   ${props => (props.padding ? `padding: ${props.padding};` : "")}
@@ -118,7 +117,6 @@ const Span = styled.span`
 const P = styled.p`
   font-size: ${props => props.size};
   font-weight: ${props => (props.bold ? "600" : "400")};
-  font-family: "Pretendard";
   color: ${props => props.color};
   position: ${props => props.position};
   ${props => (props.left ? `left: ${props.left};` : "")}

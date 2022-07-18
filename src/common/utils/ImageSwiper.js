@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import SwiperCore, { Navigation } from "swiper";
 
 // assets
-import { prevArrowIcon, nextArrowIcon } from "../assets";
+import { arrowPrevIcon, arrowNextIcon } from "../assets";
 
 const ImageSwiper = ({ children, shape }) => {
   const [swiper, setSwiper] = useState(null);
@@ -55,7 +55,7 @@ const ImageSwiper = ({ children, shape }) => {
 
 const PrevButton = styled.button`
   &.swiper-button-prev {
-    background: url(${prevArrowIcon}) no-repeat;
+    background: url(${arrowPrevIcon}) no-repeat;
     background-position: center;
   }
   &.swiper-button-prev::after {
@@ -65,7 +65,7 @@ const PrevButton = styled.button`
 
 const NextButton = styled.button`
   &.swiper-button-next {
-    background: url(${nextArrowIcon}) no-repeat;
+    background: url(${arrowNextIcon}) no-repeat;
     background-position: center;
   }
   &.swiper-button-next::after {

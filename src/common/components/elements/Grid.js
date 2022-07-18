@@ -14,13 +14,17 @@ const Grid = props => {
     flexDirection,
     width,
     height,
+    maxWidth,
     margin,
     padding,
     marginBottom,
     border,
     radius,
     bg,
+    opacity,
+    textAlign,
     wordWrap,
+    flexWrap,
     cursor,
     zIndex,
     isFlex,
@@ -39,13 +43,17 @@ const Grid = props => {
     flexDirection,
     width,
     height,
+    maxWidth,
     margin,
     padding,
     marginBottom,
     border,
     radius,
     bg,
+    opacity,
+    textAlign,
     wordWrap,
+    flexWrap,
     cursor,
     zIndex,
     isFlex,
@@ -75,6 +83,7 @@ const GridBox = styled.div`
     props.flexDirection ? `flex-direction: ${props.flexDirection};` : ""}  
   ${props => (props.width ? `width: ${props.width};` : "")}
   ${props => (props.height ? `height: ${props.height};` : "")}
+  ${props => (props.maxWidth ? `max-width: ${props.maxWidth};` : "")}
   ${props => (props.padding ? `padding: ${props.padding};` : "")}
   ${props => (props.margin ? `margin: ${props.margin};` : "")}
   ${props =>
@@ -82,7 +91,10 @@ const GridBox = styled.div`
   ${props => (props.border ? `border: ${props.border};` : "")}
   ${props => (props.radius ? `border-radius: ${props.radius};` : "")}
   ${props => (props.bg ? `background: ${props.bg};` : "")}
+  ${props => (props.opacity ? `opacity: ${props.opacity};` : "")}
+  ${props => (props.textAlign ? `text-align: ${props.textAlign};` : "")}
   ${props => (props.wordWrap ? `word-wrap: ${props.wordWrap};` : "")}
+  ${props => (props.flexWrap ? `flex-wrap: ${props.flexWrap};` : "")}
   ${props => (props.cursor ? `cursor: ${props.cursor};` : "")}
   ${props => (props.zIndex ? `z-index: ${props.zIndex};` : "")}
   // space-beteween
