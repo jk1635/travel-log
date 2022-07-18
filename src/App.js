@@ -18,7 +18,7 @@ function App() {
       <Template>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/detail' element={<Detail />} />
+          <Route path='/detail/:contentid' element={<Detail />} />
         </Routes>
       </Template>
     </div>

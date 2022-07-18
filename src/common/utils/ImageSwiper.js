@@ -57,6 +57,9 @@ const PrevButton = styled.button`
   &.swiper-button-prev {
     background: url(${arrowPrevIcon}) no-repeat;
     background-position: center;
+    background-size: contain;
+    width: 3.4rem;
+    margin: -8rem 0 0 0;
   }
   &.swiper-button-prev::after {
     display: none;
@@ -67,6 +70,9 @@ const NextButton = styled.button`
   &.swiper-button-next {
     background: url(${arrowNextIcon}) no-repeat;
     background-position: center;
+    background-size: contain;
+    width: 3.4rem;
+    margin: -8rem 0 0 0;
   }
   &.swiper-button-next::after {
     display: none;

@@ -7,6 +7,7 @@ const Grid = props => {
     position,
     top,
     left,
+    right,
     bottom,
     display,
     justifyContent,
@@ -15,20 +16,24 @@ const Grid = props => {
     width,
     height,
     maxWidth,
+    maxHeight,
     margin,
     padding,
+    marginTop,
     marginBottom,
     border,
     radius,
     bg,
     opacity,
     textAlign,
+    whiteSpace,
     wordWrap,
     flexWrap,
     cursor,
     zIndex,
     isFlex,
     isFlex2,
+    mobileColumn,
   } = props;
 
   const styles = {
@@ -36,6 +41,7 @@ const Grid = props => {
     position,
     top,
     left,
+    right,
     bottom,
     display,
     justifyContent,
@@ -44,20 +50,24 @@ const Grid = props => {
     width,
     height,
     maxWidth,
+    maxHeight,
     margin,
     padding,
+    marginTop,
     marginBottom,
     border,
     radius,
     bg,
     opacity,
     textAlign,
+    whiteSpace,
     wordWrap,
     flexWrap,
     cursor,
     zIndex,
     isFlex,
     isFlex2,
+    mobileColumn,
   };
   return <GridBox {...styles}>{children}</GridBox>;
 };
@@ -74,6 +84,7 @@ const GridBox = styled.div`
   ${props => (props.position ? `position: ${props.position};` : "")}
   ${props => (props.top ? `top: ${props.top};` : "")}
   ${props => (props.left ? `left: ${props.left};` : "")}
+  ${props => (props.right ? ` right: ${props.right};` : "")}
   ${props => (props.bottom ? `bottom: ${props.bottom};` : "")}
   ${props => (props.display ? `display: ${props.display};` : "")}
   ${props =>
@@ -84,8 +95,10 @@ const GridBox = styled.div`
   ${props => (props.width ? `width: ${props.width};` : "")}
   ${props => (props.height ? `height: ${props.height};` : "")}
   ${props => (props.maxWidth ? `max-width: ${props.maxWidth};` : "")}
+  ${props => (props.maxHeight ? `max-height: ${props.maxHeight};` : "")}
   ${props => (props.padding ? `padding: ${props.padding};` : "")}
   ${props => (props.margin ? `margin: ${props.margin};` : "")}
+  ${props => (props.marginTop ? `margin-top: ${props.marginTop};` : "")}
   ${props =>
     props.marginBottom ? `margin-bottom: ${props.marginBottom};` : ""}
   ${props => (props.border ? `border: ${props.border};` : "")}
@@ -93,6 +106,7 @@ const GridBox = styled.div`
   ${props => (props.bg ? `background: ${props.bg};` : "")}
   ${props => (props.opacity ? `opacity: ${props.opacity};` : "")}
   ${props => (props.textAlign ? `text-align: ${props.textAlign};` : "")}
+  ${props => (props.whiteSpace ? ` white-space: ${props.whiteSpace};` : "")}
   ${props => (props.wordWrap ? `word-wrap: ${props.wordWrap};` : "")}
   ${props => (props.flexWrap ? `flex-wrap: ${props.flexWrap};` : "")}
   ${props => (props.cursor ? `cursor: ${props.cursor};` : "")}
@@ -107,6 +121,13 @@ const GridBox = styled.div`
     props.isFlex2
       ? `display: flex; align-items: center; justify-content: center;`
       : ""}
+  // mobile column
+    @media screen and (max-width: 375px) {
+    ${props =>
+      props.mobileColumn
+        ? `display: flex; flex-direction: column; justify-content: center;`
+        : ""};
+  }
 `;
 
 export default Grid;

@@ -55,6 +55,7 @@ const Text = props => {
   if (type === "h1") {
     return <H1 {...styles}>{children}</H1>;
   }
+
   if (type === "h2") {
     return <H2 {...styles}>{children}</H2>;
   }
@@ -84,7 +85,7 @@ Text.defaultProps = {
 const H1 = styled.h1`
   color: ${props => props.color};
   font-size: ${props => props.size};
-  font-family: "Montserrat";  
+  font-family: "Montserrat";
   ${props => (props.width ? `width: ${props.width};` : "")}
   ${props => (props.height ? `height: ${props.height};` : "")} 
   ${props => (props.padding ? `padding: ${props.padding};` : "")}

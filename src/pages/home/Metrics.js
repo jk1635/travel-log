@@ -14,9 +14,16 @@ const Metrics = () => {
   const RankCount = useCountUp(0, 125, 2);
   const AuthorityCount = useCountUp(0, 89, 2);
   return (
-    <Grid isFlex padding='2rem' margin='5rem 0 1rem 0' flexWrap='wrap'>
+    <Grid
+      mobileColumn
+      isFlex
+      padding='2rem'
+      margin='5rem 0 1rem 0'
+      flexWrap='wrap'
+    >
       <div {...useFadeIn("first", 0.7, 20)}>
         <Grid
+          marginTop='1rem'
           textAlign='center'
           padding='1rem 1.4rem'
           border='1px solid var(--white)'
@@ -34,6 +41,7 @@ const Metrics = () => {
 
           <Text color='var(--black)' size='20px' whiteSpace='nowrap'>
             <Image
+              type='icon'
               margin='0 1rem -0.1rem 0'
               size='20'
               src={travelerIcon}
@@ -45,6 +53,7 @@ const Metrics = () => {
       </div>
       <div {...useFadeIn("second", 0.7, 20)}>
         <Grid
+          marginTop='1rem'
           textAlign='center'
           padding='1rem 1.4rem'
           border='1px solid var(--white)'
@@ -73,6 +82,7 @@ const Metrics = () => {
       </div>
       <div {...useFadeIn("third", 0.7, 20)}>
         <Grid
+          marginTop='1rem'
           textAlign='center'
           padding='1rem 1.4rem'
           border='1px solid var(--white)'
@@ -88,7 +98,12 @@ const Metrics = () => {
             Authority Score
           </Text>
           <Text color='var(--black)' size='20px'>
-            <Image margin='0 1rem -0.1rem 0' size='18' src={starIcon} />
+            <Image
+              type='icon'
+              margin='0 1rem -0.1rem 0'
+              size='18'
+              src={starIcon}
+            />
             <strong>{AuthorityCount}</strong>
           </Text>
         </Grid>
