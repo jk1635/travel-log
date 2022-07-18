@@ -30,6 +30,7 @@ const ImageSwiper = ({ children, shape }) => {
       swiper.activeIndex = mainImageIndex;
       swiper.navigation.update();
     },
+    slidesPerView: 1.045,
     spaceBetween: 10,
     onSwiper: setSwiper,
     onSlideChange: e => setMainImageIndex(e.activeIndex),
@@ -37,13 +38,14 @@ const ImageSwiper = ({ children, shape }) => {
 
   if (shape === "overflow") {
     return (
-      <Swiper slidesPerView={1.045} {...swiperParams} ref={setSwiper}>
+      <Swiper slidesOffsetAfter={20} {...swiperParams} ref={setSwiper}>
         {children}
         <PrevButton ref={navigationPrevRef} className='swiper-button-prev' />
         <NextButton ref={navigationNextRef} className='swiper-button-next' />
       </Swiper>
     );
   }
+
   return (
     <Swiper {...swiperParams} ref={setSwiper}>
       {children}
