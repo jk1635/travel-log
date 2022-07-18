@@ -2,16 +2,20 @@
 
 ## Todo-List
 
-1. CountUp hook, FadeIn hook
+~~1. CountUp hook~~
 
-2. Swiper + overflow
+~~2. FadeIn hook~~
 
-3. Naver MAP API
+~~3. Swiper + overflow (오류 수정)~~
 
-4. MAP 전체 화면 보기
+~~4. Naver MAP API~~
 
-5. Node.js 서버 구축
+~~5. Change Marker~~
 
-6. 배포
+6. MAP 전체 화면 보기
 
-7. Next.js Migration
+~~7. Node.js 서버 구축~~
+
+8. 배포
+
+9. Next.js Migration
