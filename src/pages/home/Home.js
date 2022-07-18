@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import api from "../../common/utils/API";
 
@@ -25,9 +25,9 @@ import DriveEtaIcon from "@mui/icons-material/DriveEta";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 
 const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const PATH = process.env.REACT_APP_IMAGE_URL;
-  const [location, setLocation] = useState(null);
+  const [area, setArea] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -43,7 +43,7 @@ const Home = () => {
         setLoading(true);
         const response = await api.get(`/locations`);
         console.log("data", response.data);
-        setLocation(response.data);
+        setArea(response.data);
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -57,7 +57,7 @@ const Home = () => {
 
   if (loading) return <Loading />;
   if (error) return <Error />;
-  if (!location) return null;
+  if (!area) return null;
   return (
     <>
       <Grid isFlex flexDirection='column'>
@@ -78,18 +78,23 @@ const Home = () => {
         </BackgroundImg>
 
         <Grid>
-          <Grid padding='2rem' zIndex='1' cursor='pointer' bg='white'>
-            <Text
-              padding='0 2rem 0 0'
-              type='h1'
-              size
-              color='var(--black)'
-              margin='0 0 1.2rem 0'
-            >
-              지난 여행
-            </Text>
-            <ImageSwiper>
-              {location.map((locations, index) => {
+          <Text
+            type='h1'
+            size='2rem'
+            color='var(--black)'
+            padding='1.4rem  2rem'
+          >
+            지난 여행
+          </Text>
+          <Grid width='auto' height='1px' margin='0 2rem 0 2rem' bg='#EBEBEB' />
+          <Grid
+            padding='2.5rem 0 2rem 2rem'
+            zIndex='1'
+            cursor='pointer'
+            bg='white'
+          >
+            <ImageSwiper shape='overflow'>
+              {area.map((areas, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <Grid
@@ -97,24 +102,30 @@ const Home = () => {
                       radius='8px'
                       border='1px solid var(--bordergray)'
                     >
-                      <Image
-                        width='100%'
-                        height='45rem'
-                        maxHeight='70%'
-                        radius='8px 8px 0 0'
-                        objectFit='cover'
-                        backgroundSize='contain'
-                        backgroundPosition='center'
-                        onClick={() => {
-                          navigate(`/detail/${locations.contentid}`);
-                        }}
-                        src={`${PATH}` + locations.thumbnail}
-                        alt='photos'
-                      />
+                      <Link
+                        to={`/detail/${areas.contentid}`}
+                        state={{ data: area }}
+                      >
+                        <Image
+                          width='100%'
+                          height='45rem'
+                          maxHeight='70%'
+                          radius='8px 8px 0 0'
+                          objectFit='cover'
+                          backgroundSize='contain'
+                          backgroundPosition='center'
+                          // onClick={() => {
+                          //   navigate(`/detail/${locations.contentid}`);
+                          // }}
+                          // state={{ data: area }}
+                          src={`${PATH}` + areas.thumbnail}
+                          alt='photos'
+                        />
+                      </Link>
                       <Grid isFlex2 padding='1rem 2rem'>
                         <Grid width='25rem' isFlex whiteSpace='nowrap'>
                           <Text type='h1' color='var(--balck)' size='2rem'>
-                            {locations.dep}
+                            {areas.dep}
                           </Text>
                           <TrendingFlatIcon
                             sx={{
@@ -135,7 +146,7 @@ const Home = () => {
                             }}
                           />
                           <Text type='h1' color='var(--balck)' size='2rem'>
-                            {locations.addr2}
+                            {areas.addr2}
                           </Text>
                         </Grid>
                       </Grid>
@@ -148,11 +159,11 @@ const Home = () => {
                             padding='1rem 0'
                             whiteSpace='nowrap'
                           >
-                            <Text size='1.1rem' lineHeight='2rem' bold>
-                              DEP {locations.depdate}
+                            <Text size='1.2rem' lineHeight='2rem' bold>
+                              DEP {areas.depdate}
                             </Text>
-                            <Text size='1.1rem' lineHeight='2rem' bold>
-                              ARR {locations.arrdate}
+                            <Text size='1.2rem' lineHeight='2rem' bold>
+                              ARR {areas.arrdate}
                             </Text>
                           </Grid>
 
