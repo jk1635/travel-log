@@ -23,7 +23,7 @@ import {
 import { Metrics } from "./";
 import DriveEtaIcon from "@mui/icons-material/DriveEta";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
-import { PlaceList, Background } from "./";
+import { PlaceList, Background, MultipleMarkerMap } from "./";
 
 const Home = () => {
   // const navigate = useNavigate();
@@ -43,8 +43,20 @@ const Home = () => {
         setError(null);
         setLoading(true);
         const response = await api.get(`/locations`);
-        console.log("data", response.data);
+        // console.log("data", response.data);
         setArea(response.data);
+
+        // const tempList = [];
+        // const data = () => {
+        //   for (let i = 0; i < area[i].length; i++) {
+        //     const temp =
+        //     tempList.push(...temp);
+        //     // return list;
+        //   }
+        // };
+        // console.log("area", tempList);
+        // return tempList;
+        // console.log("area", tempList);
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -55,16 +67,18 @@ const Home = () => {
     };
     getLocationData();
   }, []);
-
+  // for (let i = 1; i <= resultNum; i++) {
+  //   detailGalleryUrl.push(response.data.gallery_contents[i].car_url);
+  // }
   if (loading) return <Loading />;
   if (error) return <Error />;
   if (!area) return null;
   return (
     <>
       <Grid isFlex flexDirection='column'>
-        <Background>
+        <Background area={area}>
           <Grid position='relative' marginBottom='2rem'>
-            <Text
+            {/* <Text
               center
               type='h1'
               size='3rem'
@@ -73,23 +87,21 @@ const Home = () => {
             >
               Travel Log
             </Text>
-            <Metrics />
+            <Metrics /> */}
             <RoundEdge />
           </Grid>
         </Background>
 
         <Grid>
-          <Text
-            type='h1'
-            size='2.2rem'
-            color='var(--black)'
-            padding='2rem'
-          >
+          <Text type='h1' size='2.2rem' color='var(--black)' padding='2rem'>
             지난 여행
           </Text>
           <Line />
-          <PlaceList area={area} />
         </Grid>
+
+        {/* <MultipleMarkerMap area={area} /> */}
+
+        <PlaceList area={area} />
       </Grid>
     </>
   );

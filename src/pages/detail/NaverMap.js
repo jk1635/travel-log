@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 
 import { locationIcon } from "../../common/assets";
 
-const NaverMap = ({ tourSpot }) => {
+const NaverMap = ({ area }) => {
   useEffect(() => {
     // 가져온 모든 함수는 window 객체 안에 있다.
     const { naver } = window;
 
     const container = document.getElementById("map");
 
-    const lng = tourSpot.mapx;
-    const lat = tourSpot.mapy;
+    const lng = area.mapx;
+    const lat = area.mapy;
 
     const location = new naver.maps.LatLng(lat, lng);
 

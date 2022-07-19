@@ -27,7 +27,7 @@ const Detail = () => {
   return (
     <Grid flexDirection='column' width='auto'>
       <Grid position='relative'>
-        <PhotosList tourSpot={area[0]} />
+        <PhotosList area={area[0]} />
         <Grid
           position='absolute'
           top='0'
@@ -74,7 +74,7 @@ const Detail = () => {
           </Text>
         </Grid>
         <Grid margin='1rem 0'>
-          <NaverMap tourSpot={area[0]} />
+          <NaverMap area={area[0]} />
         </Grid>
 
         <Grid

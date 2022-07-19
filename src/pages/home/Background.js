@@ -2,9 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 import { backgroundImage } from "../../common/assets";
+import MultipleMarkerMap from "./MultipleMarkerMap";
 
-const Background = ({ children }) => {
-  return <BackgroundImg>{children}</BackgroundImg>;
+const Background = ({ area, children }) => {
+  return (
+    <BackgroundImg>
+      <MultipleMarkerMap area={area}>{children}</MultipleMarkerMap>
+    </BackgroundImg>
+  );
 };
 
 const BackgroundImg = styled.div`
