@@ -25,14 +25,15 @@ module.exports = {
           url: "5ZAJhH3.jpg",
         },
       ],
-      mapx: 127.15365134801687,
-      mapy: 35.81822697544037,
+      mapx: 127.15359605926973,
+      mapy: 35.81824732445106,
       mlevel: 6,
       modifiedtime: 20220512174342,
       readcount: 5357,
       sigungucode: 12,
       tel: "063-282-1330",
       title: "전주 한옥마을",
+      site: "http://hanok.jeonju.go.kr/",
     },
     {
       dep: "전주",
@@ -63,6 +64,7 @@ module.exports = {
       sigungucode: 12,
       tel: "063-236-1577",
       title: "전통의 전주, 전라감영",
+      site: "https://www.jeonju.go.kr/index.9is?contentUid=9be517a752e4538d0152e924f6d759bb&subPath=",
     },
     {
       dep: "수원",
@@ -113,6 +115,7 @@ module.exports = {
       sigungucode: 23,
       tel: "02-3210-4633",
       title: "경복궁",
+      site: "https://www.royalpalace.go.kr/",
     },
     {
       dep: "일산",
@@ -163,6 +166,7 @@ module.exports = {
       sigungucode: 24,
       tel: "02-2133-1371",
       title: "북촌 한옥마을",
+      site: "https://hanok.seoul.go.kr/front/index.do",
     },
     {
       dep: "수원",
@@ -200,6 +204,7 @@ module.exports = {
       readcount: 14637,
       tel: "02-490-2778",
       title: "서울 명산트레킹",
+      site: "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=be08090a-82fe-4670-af13-2f65ec1ae3d6",
     },
     {
       dep: "수원",
@@ -230,6 +235,7 @@ module.exports = {
       mapy: 36.43922654659952,
       tel: "02-490-2778",
       title: "상주 경천섬공원",
+      site: "https://www.sangju.go.kr/tour/sights/detail.tc?mn=4001&pageSeq=2892&paramIdx=645",
     },
     {
       dep: "수원",
@@ -256,6 +262,7 @@ module.exports = {
       mapy: 37.219878816414486,
       tel: "033-375-6365",
       title: "영월 한반도 지형전망대",
+      site: "http://www.heritage.go.kr/heri/cul/culSelectDetail.do;jsessionid=uaXsAgX9Bd2sEZfynT4IUsPzIDMfmCQxO0i2r2Poqux5D3Bq72hsNuOMuT79hemF.cpawas_servlet_engine1?pageNo=1_1_2_0&ccbaCpno=1353200750000",
     },
   ],
 };
