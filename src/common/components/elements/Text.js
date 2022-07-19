@@ -25,7 +25,6 @@ const Text = props => {
     type,
     cursor,
     onClick,
-    ctg,
   } = props;
 
   const styles = {
@@ -51,7 +50,6 @@ const Text = props => {
     type,
     cursor,
     onClick,
-    ctg,
   };
 
   if (type === "h1") {
@@ -135,16 +133,6 @@ const P = styled.p`
   ${props =>
     props.textDecoration ? `text-decoration: ${props.textDecoration};` : ""}
   ${props => (props.cursor ? `cursor: ${props.cursor};` : "")}
-  ${props =>
-    props.ctg
-      ? `&:hover {
-      background-color: white;
-      border: 0.1rem solid #78e08f;
-    }`
-      : ""}
-  :active {
-    opacity: 0.7;
-  }
 `;
 
 export default Text;

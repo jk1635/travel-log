@@ -10,6 +10,8 @@ import Detail from "./pages/detail/Detail";
 
 // components
 import { Template } from "./common/components";
+import Past from "./pages/home/Past";
+import Future from "./pages/home/Future";
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
       <GlobalStyle />
       <Template>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home />}>
+            <Route path='past' element={<Past />} />
+            <Route path='future' element={<Future />} />
+          </Route>
           <Route path='/detail/:contentid' element={<Detail />} />
         </Routes>
       </Template>

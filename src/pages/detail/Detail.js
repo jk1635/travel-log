@@ -14,7 +14,7 @@ import {
   homeIcon,
   backIcon,
 } from "../../common/assets";
-
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Detail = () => {
   const PATH = process.env.REACT_APP_IMAGE_URL;
   const location = useLocation();
@@ -36,7 +36,16 @@ const Detail = () => {
           zIndex='3'
           cursor='pointer'
         >
-          <Image width='3rem' src={backIcon} alt='back' />
+          {/* <Image width='3rem' src={backIcon} alt='back' /> */}
+          <Link to='/'>
+            <ArrowBackIosIcon
+              sx={{
+                fontSize: 25,
+                color: "var(--white)",
+                filter: "drop-shadow(1px 1px 4px var(--bordergray))",
+              }}
+            />
+          </Link>
         </Grid>
         <RoundEdge bottom='0' />
       </Grid>

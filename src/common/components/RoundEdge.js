@@ -17,7 +17,6 @@ const RoundEdgeBox = styled.div`
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
   z-index: 1;
-  border: 1px solid red;
 `;
 
 export default RoundEdge;

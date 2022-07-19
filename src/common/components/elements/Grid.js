@@ -34,6 +34,7 @@ const Grid = props => {
     isFlex,
     isFlex2,
     mobileColumn,
+    onClick,
   } = props;
 
   const styles = {
@@ -68,8 +69,13 @@ const Grid = props => {
     isFlex,
     isFlex2,
     mobileColumn,
+    onClick,
   };
-  return <GridBox {...styles}>{children}</GridBox>;
+  return (
+    <GridBox {...styles} onClick={onClick}>
+      {children}
+    </GridBox>
+  );
 };
 
 Grid.defaultProps = {

@@ -10,15 +10,15 @@ import useCountUp from "../../common/utils/useCountUp";
 import PublicIcon from "@mui/icons-material/Public";
 
 const Metrics = () => {
-  const VisitsCount = useCountUp(0, 424, 2);
+  const VisitsCount = useCountUp(0, 120, 2);
   const DistanceCount = useCountUp(0, 853, 2);
-  const StampCount = useCountUp(0, 89, 2);
+  const RankCount = useCountUp(0, 89, 2);
   return (
     <Grid
       mobileColumn
       isFlex
       padding='2rem'
-      margin='5rem 0 1rem 0'
+      margin='1rem 0 1rem 0'
       flexWrap='wrap'
     >
       <div {...useFadeIn("first", 0.7, 20)}>
@@ -36,7 +36,7 @@ const Metrics = () => {
             size='1.4rem'
             whiteSpace='nowrap'
           >
-            Visits
+            Visited Cities
           </Text>
 
           <Text color='var(--black)' size='20px' whiteSpace='nowrap'>
@@ -47,7 +47,7 @@ const Metrics = () => {
               src={travelerIcon}
               alt='travelerIcon'
             />
-            <strong>{VisitsCount}M</strong>
+            <strong>{VisitsCount}</strong>
           </Text>
         </Grid>
       </div>
@@ -95,7 +95,7 @@ const Metrics = () => {
             size='1.4rem'
             whiteSpace='nowrap'
           >
-            Authority Score
+            Ranking
           </Text>
           <Text color='var(--black)' size='20px'>
             <Image
@@ -104,7 +104,7 @@ const Metrics = () => {
               size='18'
               src={starIcon}
             />
-            <strong>{StampCount}</strong>
+            <strong>{RankCount}</strong>
           </Text>
         </Grid>
       </div>

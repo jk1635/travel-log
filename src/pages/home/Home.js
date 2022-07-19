@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import api from "../../common/utils/API";
 
@@ -20,11 +20,17 @@ import {
   // sangjuCharacter,
   // seoulCharacter,
 } from "../../common/assets";
-import { Metrics } from "./";
+import { Metrics, Navbar } from "./";
 import DriveEtaIcon from "@mui/icons-material/DriveEta";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import { PlaceList, Background, MultipleMarkerMap } from "./";
+export const TabA = () => {
+  return <p>A</p>;
+};
 
+export const TabB = () => {
+  return <p>B</p>;
+};
 const Home = () => {
   // const navigate = useNavigate();
   const PATH = process.env.REACT_APP_IMAGE_URL;
@@ -78,29 +84,37 @@ const Home = () => {
       <Grid isFlex flexDirection='column'>
         <Background area={area}>
           <Grid position='relative' marginBottom='2rem'>
-            {/* <Text
+            <Text
               center
               type='h1'
               size='3rem'
               color='var(--white)'
-              padding='4rem 0 4rem 0'
+              padding='4rem 0 1rem 0'
             >
               Travel Log
             </Text>
-            <Metrics /> */}
+            <Metrics />
             <RoundEdge />
           </Grid>
         </Background>
 
+        <Navbar />
+        <Link to='past' >
+          A
+        </Link>
+        <Link to='future' >
+          B
+        </Link>
+        <Outlet />
         <Grid>
-          <Text type='h1' size='2.2rem' color='var(--black)' padding='2rem'>
+          {/* <Text type='h1' size='2.2rem' color='var(--black)' padding='2rem'>
             지난 여행
-          </Text>
+          </Text> */}
           <Line />
         </Grid>
-
-        {/* <MultipleMarkerMap area={area} /> */}
-
+        <Grid padding='2rem'>
+          <MultipleMarkerMap area={area} />
+        </Grid>
         <PlaceList area={area} />
       </Grid>
     </>
