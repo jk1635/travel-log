@@ -5,13 +5,11 @@ import { Routes, Route } from "react-router-dom";
 import GlobalStyle from "./common/styles/GlobalStyle";
 
 // pages
-import Home from "./pages/home/Home";
-import Detail from "./pages/detail/Detail";
+import { Home, TravelLog, TravelPlan } from "./pages/home";
+import { Detail } from "./pages/detail";
 
 // components
 import { Template } from "./common/components";
-import Past from "./pages/home/Past";
-import Future from "./pages/home/Future";
 
 function App() {
   return (
@@ -20,8 +18,8 @@ function App() {
       <Template>
         <Routes>
           <Route path='/' element={<Home />}>
-            <Route path='past' element={<Past />} />
-            <Route path='future' element={<Future />} />
+            <Route path='/' element={<TravelLog />} />
+            <Route path='travelplan' element={<TravelPlan />} />
           </Route>
           <Route path='/detail/:contentid' element={<Detail />} />
         </Routes>

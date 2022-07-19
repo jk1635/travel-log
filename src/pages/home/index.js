@@ -1,7 +1,19 @@
+import Home from "./Home";
+import Logo from "./Logo";
 import Metrics from "./Metrics";
-import PlaceList from "./PlaceList";
 import Background from "./Background";
+import PlaceList from "./PlaceList";
 import MultipleMarkerMap from "./MultipleMarkerMap";
-import Navbar from "./Navbar";
+import TravelPlan from "./TravelPlan";
+import TravelLog from "./TravelLog";
 
-export { Metrics, PlaceList, Background, MultipleMarkerMap, Navbar };
+export {
+  Home,
+  Logo,
+  Metrics,
+  Background,
+  PlaceList,
+  MultipleMarkerMap,
+  TravelPlan,
+  TravelLog,
+};

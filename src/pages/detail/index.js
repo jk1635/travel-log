@@ -1,4 +1,5 @@
-import NaverMap from "./NaverMap";
+import Detail from "./Detail";
+import SpotMarkerMap from "./SpotMarkerMap";
 import PhotosList from "./PhotosList";
 
-export { NaverMap, PhotosList };
+export { Detail, SpotMarkerMap, PhotosList };

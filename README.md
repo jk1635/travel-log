@@ -2,20 +2,32 @@
 
 ## Todo-List
 
-~~1. CountUp hook~~
+- [x] CountUp hook
 
-~~2. FadeIn hook~~
+- [x] FadeIn hook
 
-~~3. Swiper + overflow (오류 수정)~~
+- [x] OPEN API 연동 -> 노드 서버로 대체
 
-~~4. Naver MAP API~~
+- [x] Swiper + overflow (오류 수정)
 
-~~5. Change Marker~~
+- [x] Naver MAP API
 
-6. MAP 전체 화면 보기
+- [x] Change Marker
 
-~~7. Node.js 서버 구축~~
+- [ ] MAP 전체 화면 보기
 
-8. 배포
+- [x] Node.js 서버 구축
 
-9. Next.js Migration
+- [ ] 배포
+
+- [ ] Next.js Migration
+
+- [ ] Color
+
+## 추가
+
+- [ ] Travel Plan
+
+- [ ] My Page
+
+- [ ] GPS

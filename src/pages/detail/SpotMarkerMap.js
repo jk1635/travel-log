@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 
+// assets
 import { locationIcon } from "../../common/assets";
 
-const NaverMap = ({ area }) => {
+const SpotMarkerMap = ({ area }) => {
   useEffect(() => {
     // 가져온 모든 함수는 window 객체 안에 있다.
     const { naver } = window;
@@ -67,4 +68,4 @@ const NaverMap = ({ area }) => {
   );
 };
 
-export default NaverMap;
+export default SpotMarkerMap;

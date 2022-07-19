@@ -1,17 +1,20 @@
 import React, { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 
 import { locationIcon } from "../../common/assets";
 
-const MultipleMarkerMap = ({ area }) => {
+const MultipleMarkerMap = () => {
+  const { area } = useOutletContext();
   useEffect(() => {
     const { naver } = window;
-    var mapContainer = document.getElementById("map"); // 지도를 표시할 div
+
+    const container = document.getElementById("map"); // 지도를 표시할 div
 
     const mapOptions = {
       disableDoubleTapZoom: false,
       disableDoubleClickZoom: true,
       disableTwoFingerTapZoom: false,
-      scrollWheel: false,
+      // scrollWheel: false,
       center: new naver.maps.LatLng(36.368217651137215, 127.42027827403757), // 지도의 중심좌표
       zoomControl: true,
       zoomControlOptions: {

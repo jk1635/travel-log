@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+// assets
 import { backgroundImage } from "../../common/assets";
 
 const Background = ({ children }) => {

@@ -1,28 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 // components
-import { Error, Loading, Line, RoundEdge } from "../../common/components";
+import { Line, RoundEdge } from "../../common/components";
 import { Grid, Image, Text } from "../../common/components/elements";
-import { NaverMap, PhotosList } from "./";
+import { SpotMarkerMap, PhotosList } from "./";
 import {
   locationDarkIcon,
   locationEmptyIcon,
   phoneIcon,
   homeIcon,
-  backIcon,
 } from "../../common/assets";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Detail = () => {
-  const PATH = process.env.REACT_APP_IMAGE_URL;
   const location = useLocation();
 
   const area = location.state.data;
 
-  console.log("contentid", area.contentid);
-  console.log("location", location.pathname);
+  // console.log("contentid", area.contentid);
+  // console.log("location", location.pathname);
 
   return (
     <Grid flexDirection='column' width='auto'>
@@ -83,7 +81,7 @@ const Detail = () => {
           </Text>
         </Grid>
         <Grid margin='1rem 0'>
-          <NaverMap area={area[0]} />
+          <SpotMarkerMap area={area[0]} />
         </Grid>
 
         <Grid

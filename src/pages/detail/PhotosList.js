@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import api from "../../common/utils/API";
+import React from "react";
 
 // swiper
 import { SwiperSlide } from "swiper/react";
 import ImageSwiper from "../../common/utils/ImageSwiper";
 
 // components
-import { Grid, Text, Image } from "../../common/components/elements";
-import { completedStamp } from "../../common/assets";
-
-import DriveEtaIcon from "@mui/icons-material/DriveEta";
-import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
+import { Grid, Image } from "../../common/components/elements";
 
 const PhotosList = ({ area }) => {
   const PATH = process.env.REACT_APP_IMAGE_URL;
