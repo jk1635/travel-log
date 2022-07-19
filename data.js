@@ -18,11 +18,11 @@ module.exports = {
       firstimage: [
         {
           id: 1,
-          url: "VHtBXZE.jpg",
+          url: "5ZAJhH3.jpg",
         },
         {
           id: 2,
-          url: "5ZAJhH3.jpg",
+          url: "VHtBXZE.jpg",
         },
       ],
       mapx: 127.15359605926973,
