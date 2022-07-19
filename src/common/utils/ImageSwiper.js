@@ -30,7 +30,6 @@ const ImageSwiper = ({ children, shape }) => {
       swiper.activeIndex = mainImageIndex;
       swiper.navigation.update();
     },
-    slidesPerView: 1.045,
     spaceBetween: 10,
     onSwiper: setSwiper,
     onSlideChange: e => setMainImageIndex(e.activeIndex),
@@ -38,10 +37,23 @@ const ImageSwiper = ({ children, shape }) => {
 
   if (shape === "overflow") {
     return (
-      <Swiper slidesOffsetAfter={20} {...swiperParams} ref={setSwiper}>
+      <Swiper
+        slidesPerView={1.045}
+        slidesOffsetAfter={20}
+        {...swiperParams}
+        ref={setSwiper}
+      >
         {children}
-        <PrevButton ref={navigationPrevRef} className='swiper-button-prev' />
-        <NextButton ref={navigationNextRef} className='swiper-button-next' />
+        <PrevButton
+          style={{ margin: "-8rem 0 0 0" }}
+          ref={navigationPrevRef}
+          className='swiper-button-prev'
+        />
+        <NextButton
+          style={{ margin: "-8rem 0 0 0" }}
+          ref={navigationNextRef}
+          className='swiper-button-next'
+        />
       </Swiper>
     );
   }
@@ -61,7 +73,6 @@ const PrevButton = styled.button`
     background-position: center;
     background-size: contain;
     width: 3.4rem;
-    margin: -8rem 0 0 0;
   }
   &.swiper-button-prev::after {
     display: none;
@@ -74,7 +85,8 @@ const NextButton = styled.button`
     background-position: center;
     background-size: contain;
     width: 3.4rem;
-    margin: -8rem 0 0 0;
+    /* 
+    margin: -8rem 0 0 0; */
   }
   &.swiper-button-next::after {
     display: none;

@@ -11,8 +11,8 @@ import PublicIcon from "@mui/icons-material/Public";
 
 const Metrics = () => {
   const VisitsCount = useCountUp(0, 424, 2);
-  const RankCount = useCountUp(0, 125, 2);
-  const AuthorityCount = useCountUp(0, 89, 2);
+  const DistanceCount = useCountUp(0, 853, 2);
+  const StampCount = useCountUp(0, 89, 2);
   return (
     <Grid
       mobileColumn
@@ -66,7 +66,7 @@ const Metrics = () => {
             size='1.4rem'
             whiteSpace='nowrap'
           >
-            Global Rank
+            Distance
           </Text>
           <Text color='var(--black)' size='20px'>
             <PublicIcon
@@ -76,7 +76,7 @@ const Metrics = () => {
                 color: "#FFFFFF",
               }}
             />
-            <strong>{RankCount}</strong>
+            <strong>{DistanceCount}Km</strong>
           </Text>
         </Grid>
       </div>
@@ -104,7 +104,7 @@ const Metrics = () => {
               size='18'
               src={starIcon}
             />
-            <strong>{AuthorityCount}</strong>
+            <strong>{StampCount}</strong>
           </Text>
         </Grid>
       </div>

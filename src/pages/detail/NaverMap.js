@@ -9,10 +9,10 @@ const NaverMap = ({ tourSpot }) => {
 
     const container = document.getElementById("map");
 
-    const lng = 127.1479532;
-    const lat = 35.8242238;
+    const lng = tourSpot.mapx;
+    const lat = tourSpot.mapy;
 
-    const location = new naver.maps.LatLng(tourSpot.lat, tourSpot.lng);
+    const location = new naver.maps.LatLng(lat, lng);
 
     const mapOptions = {
       disableDoubleTapZoom: false,
@@ -33,13 +33,13 @@ const NaverMap = ({ tourSpot }) => {
       map: map,
       icon: {
         url: `${locationIcon}`,
-        // content:
-        // '<div style="width: 24px; height: 24px; border-radius: 50%; background-color: var(--main); display: flex; align-items: center; justify-content: center;">' +
-        // '<img src="' +
-        // 'https://iconmonstr-location-pin-thin.png" ' +
-        // 'style="width: 16px; height: 18px; display: block; max-width: none; max-height: none;" ' +
-        // '-webkit-user-select: none; position: absolute; top: 0; left: 0;">' +
-        // "</div>"
+        content:
+          '<div style="width: 24px; height: 24px; border-radius: 50%; background-color: var(--main); display: flex; align-items: center; justify-content: center;">' +
+          "<img src=" +
+          "{url} " +
+          'style="width: 16px; height: 18px; display: block; max-width: none; max-height: none;" ' +
+          '-webkit-user-select: none; position: absolute; top: 0; left: 0;">' +
+          "</div>",
 
         // 화면에 나타나는 마커의 크기
         size: new naver.maps.Size(32, 32),

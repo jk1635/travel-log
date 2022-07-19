@@ -51,7 +51,8 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
-  a:link, a:visited {
+  a:link, a:visited { 
+    color: var(--black);
     text-decoration: none;
   }
   
