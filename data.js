@@ -203,7 +203,7 @@ module.exports = {
       modifiedtime: 2022041111001,
       readcount: 14637,
       tel: "02-490-2778",
-      title: "서울 명산트레킹",
+      title: "서울 명산 트레킹",
       site: "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=be08090a-82fe-4670-af13-2f65ec1ae3d6",
     },
     {
