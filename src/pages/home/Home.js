@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import api from "../../common/utils/API";
-
+import styled from "styled-components";
 // components
 import { Error, Loading, Line, RoundEdge } from "../../common/components";
 import { Grid } from "../../common/components/elements";
@@ -46,14 +46,14 @@ const Home = () => {
           <Grid position='relative' marginBottom='2rem'>
             <Logo />
             <Metrics />
-            <RoundEdge />
+            <RoundEdge rightRadius='38px' />
           </Grid>
         </Background>
         <Grid
           display='flex'
           justifyContent='space-around'
           alignItems='center'
-          padding='2rem'
+          padding='1rem 0 2rem 0'
         >
           {menus.map((menu, index) => {
             return (
@@ -65,7 +65,7 @@ const Home = () => {
                   style={({ isActive }) => ({
                     color: isActive ? "var(--main)" : "#C4C4C4",
                     fontWeight: "bold",
-                    fontSize: "1.4rem",
+                    fontSize: "1.8rem",
                   })}
                 >
                   {menu.name}

@@ -28,12 +28,13 @@ const Metrics = () => {
           padding='1rem 1.4rem'
           border='1px solid var(--white)'
           radius='6px'
-          bg='rgba(255,255,255,0.4)'
+          bg='rgba(255,255,255,0.3)'
         >
           <Text
-            margin='0 0 10px 0'
-            color='var(--black)'
-            size='1.4rem'
+            width='10rem'
+            margin='0 0 0.8rem 0'
+            color='var(--white)'
+            size='1.2rem'
             whiteSpace='nowrap'
           >
             Visited Cities
@@ -58,17 +59,18 @@ const Metrics = () => {
           padding='1rem 1.4rem'
           border='1px solid var(--white)'
           radius='6px'
-          bg='rgba(255,255,255,0.4)'
+          bg='rgba(255,255,255,0.3)'
         >
           <Text
-            margin='0 0 10px 0'
-            color='var(--black)'
-            size='1.4rem'
+            width='10rem'
+            margin='0 0 0.8rem 0'
+            color='var(--white)'
+            size='1.2rem'
             whiteSpace='nowrap'
           >
             Distance
           </Text>
-          <Text color='var(--black)' size='20px'>
+          <Text color='var(--black)' size='2rem'>
             <PublicIcon
               sx={{
                 fontSize: 20,
@@ -87,17 +89,18 @@ const Metrics = () => {
           padding='1rem 1.4rem'
           border='1px solid var(--white)'
           radius='6px'
-          bg='rgba(255,255,255,0.4)'
+          bg='rgba(255,255,255,0.3)'
         >
           <Text
-            margin='0 0 10px 0'
-            color='var(--black)'
-            size='1.4rem'
+            width='10rem'
+            margin='0 0 0.8rem 0'
+            color='var(--white)'
+            size='1.2rem'
             whiteSpace='nowrap'
           >
             Ranking
           </Text>
-          <Text color='var(--black)' size='20px'>
+          <Text color='var(--black)' size='2rem'>
             <Image
               type='icon'
               margin='0 1rem -0.1rem 0'

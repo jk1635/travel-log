@@ -10,17 +10,18 @@ const Background = ({ children }) => {
 
 const BackgroundImg = styled.div`
   width: 100%;
-  background-color: var(--gray);
-  /* display: flex;
+  /* background-color: var(--gray); */
+  background-color: var(--main);
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url(${backgroundImage});
+  /* background-image: url(${backgroundImage}); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 100%;
-  object-fit: cover; */
+  object-fit: cover;
 `;
 
 export default Background;

@@ -25,7 +25,7 @@ const Detail = () => {
   return (
     <Grid flexDirection='column' width='auto'>
       <Grid position='relative'>
-        <PhotosList area={area[0]} />
+        <PhotosList area={area[6]} />
         <Grid
           position='absolute'
           top='0'
@@ -45,29 +45,29 @@ const Detail = () => {
             />
           </Link>
         </Grid>
-        <RoundEdge bottom='0' />
+        <RoundEdge leftRadius='16px' rightRadius='16px' bottom='0' />
       </Grid>
 
       <Grid
         display='flex'
         justiftContent='space-between'
         flexDirection='column'
-        padding='0rem 2rem 2rem 2rem'
+        padding='0rem 2rem 3rem 2rem'
       >
         <Grid>
           <Text
             type='h1'
             size='2.2rem'
             color='var(--black)'
-            margin='0 0 1.1rem 0'
+            margin='1rem 0 1.1rem 0'
           >
-            {area[0].addr2}
+            {area[6].addr2}
           </Text>
         </Grid>
         <Grid display='flex' alignItems='center' marginBottom='1rem'>
           <Image type='icon' src={locationDarkIcon} />
           <Text size='1.4rem' margin='0 0 0 0.4rem' whiteSpace='nowrap'>
-            {area[0].title}
+            {area[6].title}
           </Text>
         </Grid>
       </Grid>
@@ -81,13 +81,13 @@ const Detail = () => {
           </Text>
         </Grid>
         <Grid margin='1rem 0'>
-          <SpotMarkerMap area={area[0]} />
+          <SpotMarkerMap area={area[6]} />
         </Grid>
 
         <Grid
           display='flex'
           justifyContent='flex-start'
-          margin='0.1rem 0 0.9rem 0'
+          margin='1rem 0 0.9rem 0'
           flexDirection='column'
         >
           <Grid isFlex marginBottom='0.5rem'>
@@ -99,7 +99,7 @@ const Detail = () => {
                 size='1.4rem'
                 margin='0 0 0 0.8rem'
               >
-                {area[0].addr1}
+                {area[6].addr1}
               </Text>
             </Grid>
           </Grid>
@@ -112,7 +112,7 @@ const Detail = () => {
                 size='1.4rem'
                 margin='0 0 0 0.8rem'
               >
-                {area[0].tel}
+                {area[6].tel}
               </Text>
             </Grid>
           </Grid>
@@ -126,7 +126,7 @@ const Detail = () => {
                 whiteSpace='nowrap'
                 margin='0 0 0 0.8rem'
                 cursor='pointer'
-                onClick={() => window.open(`${area[0].site}`)}
+                onClick={() => window.open(`${area[6].site}`)}
               >
                 링크 바로가기
               </Text>

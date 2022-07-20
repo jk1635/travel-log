@@ -72,7 +72,7 @@ const PrevButton = styled.button`
     background: url(${arrowPrevIcon}) no-repeat;
     background-position: center;
     background-size: contain;
-    width: 3.4rem;
+    width: 4rem;
   }
   &.swiper-button-prev::after {
     display: none;
@@ -84,7 +84,7 @@ const NextButton = styled.button`
     background: url(${arrowNextIcon}) no-repeat;
     background-position: center;
     background-size: contain;
-    width: 3.4rem;
+    width: 4rem;
     /* 
     margin: -8rem 0 0 0; */
   }

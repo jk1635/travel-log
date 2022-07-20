@@ -14,7 +14,7 @@ import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 const PlaceList = ({ area }) => {
   const PATH = process.env.REACT_APP_IMAGE_URL;
   return (
-    <Grid padding='2.5rem 0 2rem 2rem' zIndex='1' cursor='pointer' bg='white'>
+    <Grid padding='0 0 2rem 2rem' zIndex='1' cursor='pointer' bg='white'>
       <ImageSwiper shape='overflow'>
         {area.map((areas, index) => {
           return (
