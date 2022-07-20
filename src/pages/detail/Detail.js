@@ -19,9 +19,6 @@ const Detail = () => {
 
   const area = location.state.data;
 
-  // console.log("contentid", area.contentid);
-  // console.log("location", location.pathname);
-
   return (
     <Grid flexDirection='column' width='auto'>
       <Grid position='relative'>
@@ -34,7 +31,6 @@ const Detail = () => {
           zIndex='3'
           cursor='pointer'
         >
-          {/* <Image width='3rem' src={backIcon} alt='back' /> */}
           <Link to='/'>
             <ArrowBackIosIcon
               sx={{

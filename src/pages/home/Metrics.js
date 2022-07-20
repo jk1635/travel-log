@@ -21,7 +21,7 @@ const Metrics = () => {
       margin='1rem 0 1rem 0'
       flexWrap='wrap'
     >
-      <div {...useFadeIn("first", 0.7, 20)}>
+      <div {...useFadeIn("first", 0.7, 40)}>
         <Grid
           marginTop='1rem'
           textAlign='center'
@@ -52,7 +52,7 @@ const Metrics = () => {
           </Text>
         </Grid>
       </div>
-      <div {...useFadeIn("second", 0.7, 20)}>
+      <div {...useFadeIn("second", 0.7, 40)}>
         <Grid
           marginTop='1rem'
           textAlign='center'
@@ -82,7 +82,7 @@ const Metrics = () => {
           </Text>
         </Grid>
       </div>
-      <div {...useFadeIn("third", 0.7, 20)}>
+      <div {...useFadeIn("third", 0.7, 40)}>
         <Grid
           marginTop='1rem'
           textAlign='center'

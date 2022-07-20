@@ -6,11 +6,11 @@ const useFadeIn = (delay, duration, position) => {
   const handleDelay = name => {
     switch (name) {
       case "first":
-        return "0s";
-      case "second":
         return "0.1s";
+      case "second":
+        return "0.3s";
       case "third":
-        return "0.2s";
+        return "0.5s";
       default:
     }
   };

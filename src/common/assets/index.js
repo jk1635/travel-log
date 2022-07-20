@@ -6,7 +6,6 @@ import timeIcon from "./images/time.svg";
 import homeIcon from "./images/home.svg";
 import travelerIcon from "./images/traveler.svg";
 import starIcon from "./images/star.svg";
-import backgroundImage from "./images/background.jpg";
 import arrowPrevIcon from "./images/arrow-left.svg";
 import arrowNextIcon from "./images/arrow-right.svg";
 import backIcon from "./images/back.svg";
@@ -21,7 +20,6 @@ export {
   homeIcon,
   travelerIcon,
   starIcon,
-  backgroundImage,
   arrowPrevIcon,
   arrowNextIcon,
   backIcon,
