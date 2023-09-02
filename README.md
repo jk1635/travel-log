@@ -9,7 +9,7 @@
 
 ## 1\. 프로젝트 소개
 
-![travel-log](https://github.com/greencoffee1635/travel-log/blob/develop/docs/resource/result.gif)
+![travel-log](https://github.com/jk1635/travel-log/blob/develop/docs/resource/result.gif)
 
 - Travel Log는 여행자의 기록을 남기는 사이트이다.
 
@@ -20,7 +20,7 @@
 ### client (branch : main)
 
 ```bash
-> git clone https://github.com/greencoffee1635/travel-log.git
+> git clone https://github.com/jk1635/travel-log.git
 > cd travel-log
 > yarn install
 > yarn start
@@ -29,7 +29,7 @@
 ### server (branch : server)
 
 ```bash
-> git clone https://github.com/greencoffee1635/travel-log.git
+> git clone https://github.com/jk1635/travel-log.git
 > cd travel-log
 > yarn install
 > node app.js
